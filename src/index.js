@@ -40,6 +40,7 @@ starters.forEach(starters => {
     <h3>${starters.name}</h3>
     <div class="is-flex">
       <p class="is-flex-75">${starters.description}</p>
+      <div class="check-starters"></div>
       <p>$${starters.price.toFixed(2)}</p>
     </div>
   </div>`;
@@ -57,6 +58,7 @@ pasta.forEach(pasta => {
     <h3>${pasta.name}</h3>
     <div class="is-flex">
       <p class="is-flex-75">${pasta.description}</p>
+      <div class="check-pasta"></div>
       <p>$${pasta.price.toFixed(2)}</p>
     </div>
   </div>`;
@@ -74,7 +76,7 @@ pizza.forEach(pizzaItem => {
     <h3>${pizzaItem.name}</h3>
     <div class="is-flex">
       <p class="is-flex-75">${pizzaItem.description}</p>
-      <div class="check"></div>
+      <div class="check-pizza"></div>
       <p>$${pizzaItem.price.toFixed(2)}</p>
     </div>
   </div>`;
@@ -87,12 +89,16 @@ document.getElementById("pizza").innerHTML = htmlPizza;
 
 ////// SPICY CHECK ////// 
 
-// create a variable and store all classes with 'check"
-const spicyClass = document.getElementsByClassName("check");
-// loop through pizza items and if the spicy property is true, add the "spicy" class that holds the spicy svg
-for (let i = 0; i < pizza.length; i++) {
-  if (pizza[i].spicy) {
-    spicyClass[i].classList.add("spicy");
+function addSpicyIcon (type, check) {
+
+  for (let i = 0; i < type.length; i++) {
+    if (type[i].spicy) {
+      check[i].classList.add("spicy");
+    }
   }
-}
+};
+
+addSpicyIcon(starters, document.getElementsByClassName("check-starters"));
+addSpicyIcon(pasta, document.getElementsByClassName("check-pasta"));
+addSpicyIcon(pizza, document.getElementsByClassName("check-pizza"));
 

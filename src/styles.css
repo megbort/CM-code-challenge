@@ -2,8 +2,8 @@ body {
   font-family: 'Cormorant Garamond';
   background-color: #ddd9d0;
   font-size: 18px;
-  border-left: 10px solid #CD212A;
-  border-right: 10px solid #008C45;
+  border-left: 15px solid #CD212A;
+  border-right: 15px solid #008C45;
 }
 
 .theme-wrapper {
@@ -64,6 +64,8 @@ h2 {
 *******************************************/
 footer {
   padding-bottom: 20px;
+  max-width: 1000px;
+  margin: 0 auto;
 }
 
 .spicy:before {
