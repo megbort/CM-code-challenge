@@ -36,9 +36,13 @@ starters.forEach(starters => {
   // create a local variable to store HTML and data output 
   // add toFixed(2) to have 2 decimal places in the price
   let htmlSegment = `
-  <h3>${starters.name}</h3>
-  <p>${starters.description}</p>
-  <p>$${starters.price.toFixed(2)}</p>`;
+  <div class="menu-item">
+    <h3>${starters.name}</h3>
+    <div class="is-flex">
+      <p class="is-flex-75">${starters.description}</p>
+      <p>$${starters.price.toFixed(2)}</p>
+    </div>
+  </div>`;
   // update global variable with local and add rendered data
   htmlStarters += htmlSegment;
 });
@@ -49,9 +53,13 @@ document.getElementById("starters").innerHTML = htmlStarters;
 let htmlPasta = "";
 pasta.forEach(pasta => {
   let htmlSegment = `
-  <h3>${pasta.name}</h3>
-  <p>${pasta.description}</p>
-  <p>$${pasta.price.toFixed(2)}</p>`;
+  <div class="menu-item">
+    <h3>${pasta.name}</h3>
+    <div class="is-flex">
+      <p class="is-flex-75">${pasta.description}</p>
+      <p>$${pasta.price.toFixed(2)}</p>
+    </div>
+  </div>`;
 
   htmlPasta += htmlSegment;
 });
@@ -62,10 +70,14 @@ document.getElementById("pasta").innerHTML = htmlPasta;
 let htmlPizza = "";
 pizza.forEach(pizzaItem => {
   let htmlSegment = `
-  <h3>${pizzaItem.name}</h3>
-  <p>${pizzaItem.description}</p>\
-  <div class="check"></div>
-  <p>$${pizzaItem.price.toFixed(2)}</p>`;
+  <div class="menu-item">
+    <h3>${pizzaItem.name}</h3>
+    <div class="is-flex">
+      <p class="is-flex-75">${pizzaItem.description}</p>
+      <div class="check"></div>
+      <p>$${pizzaItem.price.toFixed(2)}</p>
+    </div>
+  </div>`;
 
   htmlPizza += htmlSegment;
 });
@@ -73,7 +85,7 @@ pizza.forEach(pizzaItem => {
 document.getElementById("pizza").innerHTML = htmlPizza;
 
 
-////// SPICY CHECK //////
+////// SPICY CHECK ////// 
 
 // create a variable and store all classes with 'check"
 const spicyClass = document.getElementsByClassName("check");
