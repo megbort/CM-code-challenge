@@ -51,7 +51,7 @@ pasta.forEach(pasta => {
   let htmlSegment = `
   <h3>${pasta.name}</h3>
   <p>${pasta.description}</p>
-  <p>$${pasta.price}</p>`;
+  <p>$${pasta.price.toFixed(2)}</p>`;
 
   htmlPasta += htmlSegment;
 });
@@ -60,11 +60,12 @@ document.getElementById("pasta").innerHTML = htmlPasta;
 
 // PIZZA (repeat above)
 let htmlPizza = "";
-pizza.forEach(pizza => {
+pizza.forEach(pizzaItem => {
   let htmlSegment = `
-  <h3>${pizza.name}</h3>
-  <p>${pizza.description}</p>
-  <p>$${pizza.price}</p>`;
+  <h3>${pizzaItem.name}</h3>
+  <p>${pizzaItem.description}</p>\
+  <div class="check"></div>
+  <p>$${pizzaItem.price.toFixed(2)}</p>`;
 
   htmlPizza += htmlSegment;
 });
@@ -72,11 +73,14 @@ pizza.forEach(pizza => {
 document.getElementById("pizza").innerHTML = htmlPizza;
 
 
+////// SPICY CHECK //////
 
-
-
-
-
-
-
+// create a variable and store all classes with 'check"
+const spicyClass = document.getElementsByClassName("check");
+// loop through pizza items and if the spicy property is true, add the "spicy" class that holds the spicy svg
+for (let i = 0; i < pizza.length; i++) {
+  if (pizza[i].spicy) {
+    spicyClass[i].classList.add("spicy");
+  }
+}
 
