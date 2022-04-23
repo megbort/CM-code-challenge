@@ -87,18 +87,45 @@ pizza.forEach(pizzaItem => {
 document.getElementById("pizza").innerHTML = htmlPizza;
 
 
-////// SPICY CHECK ////// 
+////// SPICY ICON CHECK ////// 
 
+// create a function with parameters; menu type and check class
 function addSpicyIcon (type, check) {
-
+  // for loop to cycle through the menu type
   for (let i = 0; i < type.length; i++) {
+    // if the spicy property is true
     if (type[i].spicy) {
+      // add the "spicy" class to show the icon
       check[i].classList.add("spicy");
     }
   }
 };
-
+// call the functions and add the parameters for each menu type and check-class
 addSpicyIcon(starters, document.getElementsByClassName("check-starters"));
 addSpicyIcon(pasta, document.getElementsByClassName("check-pasta"));
 addSpicyIcon(pizza, document.getElementsByClassName("check-pizza"));
 
+
+////// SPICY CHECKBOX ////// 
+
+// create variable to store our checkbox input
+let checkbox = document.querySelector('input[type=checkbox]');
+// add event listener to track when the checkbox changes
+// after a change fire the function below
+checkbox.addEventListener('change', function() {
+  // store all the elements with the class name spicy
+  let items = document.getElementsByClassName("spicy");
+
+  if(this.checked) {   
+    // if checked display the elements with spicy 
+    Array.prototype.forEach.call(items, item => {
+      item.parentElement.parentElement.style.display = "inline";
+    });
+  } else {
+    // if NOT checked display the elements with spicy 
+    Array.prototype.forEach.call(items, item => {
+      item.parentElement.parentElement.style.display = "none";
+    });
+    console.log(items);
+  }
+});

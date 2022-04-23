@@ -18,11 +18,12 @@ GitHub: https://github.com/megbort/portfolio
 
 INSPIRATION
 
-1.	Wordle (https://www.nytimes.com/games/wordle/index.html) -  Wordle is a popular online puzzle word game that my friend introduced me to recently. The concept and idea is very simple but also very fun. This game is done (or can be done) entirely with Vanilla JavaScript. Code Academy wrote an article on the game and even explain how it’s built. Link to the article: https://www.codecademy.com/resources/blog/how-to-code-wordle-game-in-javascript/. Super fun and would love to try and build my own word game sometime.
+1.	Wordle (https://www.nytimes.com/games/wordle/index.html) -  Wordle is a popular online puzzle word game that my friend introduced me to recently. The concept and idea is very simple but also very fun. This game is done (or can be done) entirely with Vanilla JavaScript. Code Academy wrote an article on the game and even explain how it’s built. Link to the article: https://www.codecademy.com/resources/blog/how-to-code-wordle-game-in-javascript/. Would love to try and build my own word game sometime.
 
-2.	Tiggy (https://hello.gotiggy.com/) – Tiggy was our direct inspiration for the “Meals on Mules” project. I admired everything they did with the design, website and app. Great and simple design, with consistent branding across all platforms. As well as a responsive and functional website and application. This was also helpful for me to get a sense of what type of parameters we would need for the project (ex: sort by department; meat, frozen, etc.)
+2.	Barbra.js (https://barba.js.org/) -  Barbra.js was introduced to me by one of my previous instructors. Quick description of Barbra “a small flexible and dependency free library that helps create fluid and smooth transitions between website pages. It also helps reducing the delay between your pages, minimizing browser HTTP requests and enhancing your user's web experience.” I think the sites on their showcases page are all incredible. I plan on making a website and testing out Barbra’s animations in the near future.
 
-3.	Bandcamp Album/Artist Page (https://joeychaos.bandcamp.com/album/immolation) - This page has actually inspired me to try and improve the page’s overall appearance and functionality. Bandcamp is a great platform to promote and display music, however it’s been the same design for the past 10+ years. I’ve recently built a custom audio player with Vanilla JavaScript which I would use and continue to develop on. I think this would be a fun project to do.
+3.	Tiggy (https://hello.gotiggy.com/) – Tiggy was our direct inspiration for the “Meals on Mules” project. I admired everything they did with the design, website and app. Great and simple design, with consistent branding across all platforms. As well as a responsive and functional website and application. This was also helpful for me to get a sense of what type of parameters we would need for the project (ex: sort by department; meat, frozen, etc.)
+
 
 -----------------------------------------------
 
@@ -36,25 +37,25 @@ There’s no shortage of ideas I have when it comes to thing that I would love t
 
 Tackle the following steps to create a menu for a "Fancy Italian Restaurant".
 
-## 1. Sorting 
+## 1. Sorting ✅
 
 - In `index.js`, loop over `menuItems` and categorize them into sections based on each items assigned `type`
 - Sort the items in each category by their `menuOrder`
 
-## 2. Rendering
+## 2. Rendering ✅
 
 - Render the sorted results into the appropriate container with `index.html`
 - Format any prices. For example, 8.5 becomes \$8.50
 - Render the "spicy" icon next to any menu items where `spicy` is `true`
 
-## 3. Styling
+## 3. Styling ✅
 
 - Add some "italian menu" styling to boost your stores sales. Use Google Images if you need inspiration.
 
-## 4. BONUS: Filtering
+## 4. BONUS: Filtering ✅
 
 - Add a checkbox to toggle spicy options. When the checkbox is checked, the spicy options should be visible. It should be checked by default.
 
-## 5. BONUS: What You'd Change
+## 5. BONUS: What You'd Change ✅
 
 - Create a new file called "TODO.md". Add any additional changes you'd recommend making if this was a project you were working on for a real client.

@@ -19,7 +19,7 @@ header h1 {
   font-size: 42px;
   font-family: 'Beau Rivage';
   text-align: center;
-  padding: 20px 0px;
+  padding: 20px 0;
 }
 
 header img {
@@ -34,8 +34,8 @@ header img {
   MENU
 *******************************************/
 .section {
-  padding: 20px 0px;
-  max-width: 1000px;
+  padding: 20px 0;
+  max-width: 800px;
   margin: 0 auto;
 }
 
@@ -63,9 +63,11 @@ h2 {
   FOOTER
 *******************************************/
 footer {
-  padding-bottom: 20px;
-  max-width: 1000px;
+  padding: 20px 0;
+  max-width: 800px;
   margin: 0 auto;
+  line-height: 1.5;
+  border-top: 1px solid #000;
 }
 
 .spicy:before {
@@ -85,7 +87,6 @@ footer {
   MEDIA QUERIES
 ********************************************
 *******************************************/
-
 @media (min-width:768px) {
   body {
     border-left: 40px solid #CD212A;
